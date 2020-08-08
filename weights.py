@@ -52,3 +52,12 @@ class Weight(pygame.sprite.Sprite)
                 sys.exit()
             if event.type == KEYDOWN and event.key == K_ESCAPE:
                 sys.exit()
+                sprites.clear(screen, clear_callback)
+                sprites.update()
+
+                updates = sprites.draw(screen)
+                pygame.display.update(updates)
+
+
+# python weights.py >>
+
