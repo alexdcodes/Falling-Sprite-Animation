@@ -35,4 +35,9 @@ class Weight(pygame.sprite.Sprite)
     weight_image = weight_image.convert()
 
     sprite = pygame.sprite.RenderUpdates()
+    sprite.add(Weight())
 
+    screen = pygame.display.get_surface()
+    bg = (255, 255, 255)
+    screen.fill(bg)
+    pygame.display.flip()
