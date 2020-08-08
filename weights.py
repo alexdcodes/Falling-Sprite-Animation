@@ -41,3 +41,14 @@ class Weight(pygame.sprite.Sprite)
     bg = (255, 255, 255)
     screen.fill(bg)
     pygame.display.flip()
+
+
+    def clear_callback(surf, rect):
+        surf.fill(bg, rect)
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                sys.exit()
+            if event.type == KEYDOWN and event.key == K_ESCAPE:
+                sys.exit()
