@@ -2,6 +2,9 @@ import sys, pygame
 from pygame.locals import *
 from random import randrange
 
+screen_size = 800, 600
+weight_image = pygame.image.load('weight.png')
+
 class Weight(pygame.sprite.Sprite)
 
     def __init__(self):
@@ -25,5 +28,11 @@ class Weight(pygame.sprite.Sprite)
             self.reset()
 
     pygame.init()
-    screen_size = 800, 600
     pygame.display.set_mode(screen_size, FULLSCREEN)
+    pygame.mouse.set_mode(screen_size, FULLSCREEN)
+    pygame.mouse_set_visable(0)
+#    weight_image = pygame.image.load('weight.png')
+    weight_image = weight_image.convert()
+
+    sprite = pygame.sprite.RenderUpdates()
+
